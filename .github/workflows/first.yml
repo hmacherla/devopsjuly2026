@@ -2,13 +2,14 @@ name: WORKFLOW-1
 on: workflow_dispatch
 
 jobs:
-  job-1:
-   runs-on: ubuntu-24.04
-    steps:
+  jobs-1:
+  runs-on: ubuntu 24.04
+    steps: 
     - name: print hello world 
-     run: echo "hello world"
-
-     -name: print Thanks You
-     run: "dhanyavad"
+      run: echo "hello world"
+      
+  -name: print thank you 
+    run: echo "dhanyavad"
+  
     
     
