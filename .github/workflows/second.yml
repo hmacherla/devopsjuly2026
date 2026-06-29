@@ -1,0 +1,25 @@
+name: CI-workflow
+on: workflow_dispatch
+
+jobs:
+  build-test:
+     runs-on: ubuntu-22.04
+steps:
+- name: checkout
+  uses: actions/checkout@v7
+
+- name: build
+  run: npm build
+  
+- name: test
+  run: npm test
+
+- name: deploy
+  run: echo "my code is deployed"
+
+- name: artifact upload
+  uses: actions/checkout@v7
+  with:
+   name: artifact-1
+   path:
+      package*
